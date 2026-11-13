@@ -9,6 +9,9 @@ import Inicio from './pages/Inicio';
 import Disciplinas from './pages/Disciplinas';
 import Professores from './pages/Professores';
 import Turmas from './pages/Turmas';
+import Ofertas from './pages/Ofertas';
+import MinhaGrade from './pages/MinhaGrade';
+import Historico from './pages/Historico';
 
 function App() {
   return (
@@ -25,6 +28,11 @@ function App() {
             <Route path="/disciplinas" element={<RotaProtegida tipo="instituicao"><Disciplinas /></RotaProtegida>} />
             <Route path="/professores" element={<RotaProtegida tipo="instituicao"><Professores /></RotaProtegida>} />
             <Route path="/turmas" element={<RotaProtegida tipo="instituicao"><Turmas /></RotaProtegida>} />
+
+            {/* Páginas do aluno */}
+            <Route path="/ofertas" element={<RotaProtegida tipo="aluno"><Ofertas /></RotaProtegida>} />
+            <Route path="/minha-grade" element={<RotaProtegida tipo="aluno"><MinhaGrade /></RotaProtegida>} />
+            <Route path="/historico" element={<RotaProtegida tipo="aluno"><Historico /></RotaProtegida>} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
