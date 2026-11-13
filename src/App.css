@@ -1,0 +1,7 @@
+.cartao-atalho {
+  transition: transform 0.15s;
+}
+
+.cartao-atalho:hover {
+  transform: translateY(-3px);
+}
