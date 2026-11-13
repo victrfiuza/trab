@@ -5,3 +5,8 @@
 .cartao-atalho:hover {
   transform: translateY(-3px);
 }
+
+.celula-grade {
+  min-width: 120px;
+  height: 70px;
+}
