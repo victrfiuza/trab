@@ -1,6 +1,7 @@
 // Barra de navegação: mostra links diferentes para instituição e aluno
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import MenuUsuario from './MenuUsuario';
 
 const LINKS = {
   instituicao: [
@@ -16,13 +17,7 @@ const LINKS = {
 };
 
 function Cabecalho() {
-  const { usuario, perfil, sair } = useAuth();
-  const navigate = useNavigate();
-
-  async function handleSair() {
-    await sair();
-    navigate('/login');
-  }
+  const { usuario, perfil } = useAuth();
 
   const links = perfil ? LINKS[perfil.tipo] || [] : [];
 
@@ -37,10 +32,7 @@ function Cabecalho() {
               {link.texto}
             </NavLink>
           ))}
-          <span className="badge bg-light text-primary">
-            {perfil ? `${perfil.nome} (${perfil.tipo === 'aluno' ? 'Aluno' : 'Instituição'})` : usuario.email}
-          </span>
-          <button className="btn btn-sm btn-outline-light" onClick={handleSair}>Sair</button>
+          <MenuUsuario />
         </div>
       )}
     </nav>

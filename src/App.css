@@ -75,6 +75,24 @@
   text-decoration: underline;
 }
 
+.botao-usuario {
+  line-height: 1;
+  border-radius: 50%;
+}
+
+.botao-usuario:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.menu-usuario {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  left: auto;
+  min-width: 240px;
+  max-width: 300px;
+}
+
 .botao-icone {
   border: 0;
   padding: 0.25rem 0.4rem;
