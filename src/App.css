@@ -1,9 +1,123 @@
+:root {
+  --bs-primary: #7339f3;
+  --bs-primary-rgb: 115, 57, 243;
+  --bs-primary-text-emphasis: #2e1761;
+  --bs-primary-bg-subtle: #e3d7fd;
+  --bs-primary-border-subtle: #c7b0fa;
+  --bs-link-color: #7339f3;
+  --bs-link-color-rgb: 115, 57, 243;
+  --bs-link-hover-color: #5c2ec2;
+  --bs-link-hover-color-rgb: 92, 46, 194;
+  --bs-focus-ring-color: rgba(115, 57, 243, 0.25);
+}
+
+.btn-primary {
+  --bs-btn-bg: #7339f3;
+  --bs-btn-border-color: #7339f3;
+  --bs-btn-hover-bg: #6230cf;
+  --bs-btn-hover-border-color: #5c2ec2;
+  --bs-btn-focus-shadow-rgb: 136, 87, 245;
+  --bs-btn-active-bg: #5c2ec2;
+  --bs-btn-active-border-color: #562bb6;
+  --bs-btn-disabled-bg: #7339f3;
+  --bs-btn-disabled-border-color: #7339f3;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #7339f3;
+  --bs-btn-border-color: #7339f3;
+  --bs-btn-hover-bg: #7339f3;
+  --bs-btn-hover-border-color: #7339f3;
+  --bs-btn-focus-shadow-rgb: 115, 57, 243;
+  --bs-btn-active-bg: #7339f3;
+  --bs-btn-active-border-color: #7339f3;
+  --bs-btn-disabled-color: #7339f3;
+  --bs-btn-disabled-border-color: #7339f3;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: #b99cf9;
+  box-shadow: 0 0 0 0.25rem rgba(115, 57, 243, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: #7339f3;
+  border-color: #7339f3;
+}
+
+.list-group {
+  --bs-list-group-active-bg: #7339f3;
+  --bs-list-group-active-border-color: #7339f3;
+}
+
+.progress,
+.progress-stacked {
+  --bs-progress-bar-bg: #7339f3;
+}
+
+.ilustracao-inicio {
+  width: 100%;
+  max-height: 520px;
+}
+
+.credito-ilustracao {
+  font-size: 0.7rem;
+}
+
+.credito-ilustracao a {
+  color: var(--bs-secondary-color);
+  text-decoration: none;
+}
+
+.credito-ilustracao a:hover {
+  text-decoration: underline;
+}
+
+.botao-icone {
+  border: 0;
+  padding: 0.25rem 0.4rem;
+  line-height: 1;
+}
+
+.botao-icone:hover {
+  background-color: var(--bs-secondary-bg);
+}
+
+.modal-animado {
+  animation: modal-entrada 0.2s ease-out;
+}
+
+@keyframes modal-entrada {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .cartao-atalho {
   transition: transform 0.15s;
 }
 
 .cartao-atalho:hover {
   transform: translateY(-3px);
+}
+
+.icone-atalho {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bs-primary);
+  background-color: var(--bs-primary-bg-subtle);
 }
 
 .celula-grade {

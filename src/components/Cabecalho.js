@@ -28,7 +28,7 @@ function Cabecalho() {
 
   return (
     <nav className="navbar navbar-dark bg-primary px-3">
-      <NavLink to="/" className="navbar-brand fw-bold">Matrículas</NavLink>
+      <NavLink to="/" className="navbar-brand fw-bold">Nunuu Escola de Tecnologia</NavLink>
 
       {usuario && (
         <div className="d-flex flex-wrap align-items-center gap-2">
